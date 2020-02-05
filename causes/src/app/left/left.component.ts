@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICause } from '../shared/interfaces/cause';
+import { CausesService } from '../causes.service';
 
 @Component({
   selector: 'app-left',
@@ -7,13 +8,14 @@ import { ICause } from '../shared/interfaces/cause';
   styleUrls: ['./left.component.css']
 })
 export class LeftComponent implements OnInit {
-  causes: ICause[]
-
   
+  constructor(private causesService: CausesService) { }
 
-  constructor() { }
-
+  get causes() {
+    return this.causesService.causes;
+  }
   ngOnInit() {
+    this.causesService.loadCauses();
   }
 
 }
