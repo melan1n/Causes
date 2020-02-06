@@ -9,6 +9,7 @@ import { htmlAstToRender3Ast } from '@angular/compiler/src/render3/r3_template_t
 export class CausesService {
 
   causes: ICause[];
+  selectedCause: ICause;
 
   constructor (private http: HttpClient) { }
 

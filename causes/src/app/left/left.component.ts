@@ -18,4 +18,7 @@ export class LeftComponent implements OnInit {
     this.causesService.loadCauses();
   }
 
+  selectCauseHandler(cause: ICause) {
+    this.causesService.selectedCause = cause;
+  }
 }

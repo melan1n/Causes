@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ICause } from '../shared/interfaces/cause';
+import { CausesService } from '../causes.service';
 
 @Component({
   selector: 'app-right',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightComponent implements OnInit {
 
-  constructor() { }
+  constructor(private causeService: CausesService) { } 
+
+  get selectedCause() {
+    return this.causeService.selectedCause;
+  }
 
   ngOnInit() {
   }

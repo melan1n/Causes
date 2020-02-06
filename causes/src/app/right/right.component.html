@@ -2,24 +2,24 @@
     <div>
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-center">Trip to Palma De Mallorca</h1>
+                <h1 class="text-center">{{selectedCause.cause}}</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <img src="https://s28477.pcdn.co/wp-content/uploads/2018/01/palma_de_mallorca_airport_1-984x554.jpg" alt="" class="img-responsive img-details">
+                <img [src]="selectedCause.imageUrl" alt="" class="img-responsive img-details">
             </div>
         </div>
         <hr>
         <div class="row">
-            <div class="col-xs-12 cause-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis iusto dicta dolor nam iure ab facilis cum corporis tenetur excepturi quibusdam vero soluta quam voluptates, odio itaque eius eligendi perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque officiis cumque inventore vero fuga, iure odit culpa perferendis. Iste provident dignissimos minus odit animi esse recusandae debitis cum voluptate nam?</div>
+            <div class="col-xs-12 cause-description">{{selectedCause.description}}</div>
         </div>
         <div class="row">
             <div class="col-xs-12">
                 <p class="text-bold amount">
-                    <span>$300.00</span>
+                    <span>${{selectedCause.collectedAmount}}</span>
                     from
-                    <span>$</span>1300.00
+                    <span>$</span>{{selectedCause.neededAmount}}
                 </p>
             </div>
         </div>
